@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Encriptador</title>
+  <link rel="stylesheet" type="text/css" href="estilo.css" />
+  <script src="sintaxis.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Frame Principal -->
+  <div class="cajaPrincipal">
+    <!-- Fondo -->
+    <img src="../images/fondo.jpg" />
+
+    <!--Frame A -->
+    <div class="cajaA">
+      <!--Icono -->
+      <a href="https://www.flaticon.es/iconos-gratis/archivo-encriptado" ><img
+          src="../images/Logo.png" /></a>
+      <!--Titulo -->
+      <h1>Encriptador De Textos</h1>
+      <!--Area de texto -->
+      <textarea id="area">Ingrese el texto aquí</textarea>
+
+      <!--Señal de advetertecia -->
+      <b><img src="../images/circulo.png" /> Sin acentos y con textos cortos</b>
+    </div>
+
+    <!--Frame B -->
+    <div class="cajaB">
+      <!--Rectangulo blanco -->
+      <canvas id="rectanguloBlanco"> </canvas>
+      <!--Area de Respuesta del usuario -->
+      <textarea id="areaR"></textarea>
+      <!--Imagen de alura -->
+      <img id="imagenAlura" src="../images/Muneco.png" , title="avatar" />
+      <!--Texto de ningun resultado -->
+      <b id="textoDeNingunResultado">Ningun resultado</b>
+      <!--Texto de ningun resultado -->
+      <button id="copiar" , onclick="copiarTexto()"><b>Copiar texto</b></button>
+      <button id="guardar" , onclick="Botonguardar()"><b>Guardar historial</b></button>
+    </div>
+
+    <!--Frame B -->
+    <div class="cajaC">
+      <!--Boton encriptar -->
+      <button id="encriptar"><b>Encriptar</b></button>
+      <!--Boton de desencriptar -->
+      <button id="desencriptar"><b>Desencriptar</b></button>
+    </div>
+
+    <!--Frame D -->
+    <div id="cajaD"> </div>
+
+  </div>
+</body>
+
+</html>
+
+<!--Tabla 
+    <table>
+      <thead></thead>
+      <tbody></tbody>
+    </table> -->

@@ -1,0 +1,447 @@
+/*Variables*/
+  :root {
+    --Color-Tema-A: #4a2953;
+    --Color-Tema-B: #dbd8d8;
+    --Color-Advertencia: #4a2953;
+    --Color-Letra-A: #000000;
+    --Color-Letra-B: #000000;
+    --Color-Borde-A: transparent;
+    --Color-Tabla: #D8DFE8;
+  }
+
+
+/*Caja Padre*/
+.cajaPrincipal {
+    position: relative;
+    display: block;
+    /*Tamaño*/
+    width: 1000px;
+    height: 860px;
+    /*Posicion*/
+    left: 0;
+    top: 0;
+
+    /*Distancia entre cajas*/
+    margin: 0, 0, 0, 0;
+
+}
+
+.cajaPrincipal button {
+    cursor: pointer;
+}
+
+/*Imagen de fondo*/
+.cajaPrincipal img {
+
+    position: absolute;
+
+    width: 1040px;
+    height: 510px;
+
+    /*Posicion*/
+    left: -10px;
+    top: -10px;
+
+}
+
+/* ------------ CAJA 1 (Escribir y componentes) ---------------*/
+
+/*Caja 1*/
+.cajaA {
+    position: absolute;
+    display: block;
+
+    /*Tamaño*/
+    width: 600px;
+    height: 350px;
+    /*Posicion*/
+    left: 0;
+    top: 0;
+}
+
+/*Link de una pagina externa*/
+.cajaA a {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+/*Imagen de internet*/
+.cajaA a img {
+    width: 30px;
+    height: 30px;
+}
+
+/*Titulo*/
+.cajaA h1 {
+    position: absolute;
+    font-family: 'Roboto Mono', monospace;
+    width: 800px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 60%;
+
+    color: var(--Color-Tema-A);
+    top: -7px;
+    left: 35px;
+
+}
+
+/*Area de escritura*/
+.cajaA textarea {
+    position: absolute;
+    width: 580px;
+    height: 250px;
+    left: 20px;
+    top: 50px;
+
+    background-color: transparent;
+    border: 3px solid var(--Color-Borde-A);
+
+    font-family: 'Roboto Mono', monospace;
+    outline: none;
+    opacity: 50%;
+    font-style: normal;
+    resize: none;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: var(--Color-Letra-B);
+}
+
+/*Señal de atvertencia*/
+.cajaA b {
+
+    position: relative;
+    width: 228px;
+    height: 18px;
+    left: 50px;
+    top: 330px;
+
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+
+    color: var(--Color-Advertencia);
+
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+
+}
+
+/*Imagen de advertencia*/
+.cajaA b img {
+    width: 20px;
+    height: 20px;
+    left: -30px;
+    top: -3px;
+}
+
+
+/* ----------- Caja 2 (Respuesta al usuario) ---------------*/
+
+/*Caja 2*/
+.cajaB {
+    position: absolute;
+    display: block;
+    /*Tamaño*/
+    width: 420px;
+    height: 450px;
+    /*Posicion*/
+    left: 600px;
+    top: 0;
+}
+
+/*Rectangulo blanco*/
+.cajaB canvas {
+    position: absolute;
+    opacity: 50%;
+    width: 360px;
+    height: 410px;
+    left: 30px;
+    top: 20px;
+
+    background: var(--Color-Tema-B);
+
+    box-shadow: 10px 24px 32px -8px var(--Color-Letra-A);
+    border-radius: 32px;
+}
+
+/*Imagen de alura*/
+.cajaB img {
+
+    position: absolute;
+    width: 300px;
+    height: 280px;
+
+    /*Posicion*/
+    left: 80px;
+    top: 55px;
+
+}
+
+/*Texto de ningun resultado*/
+.cajaB #textoDeNingunResultado {
+
+    position: absolute;
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 60%;
+    left: 100px;
+    top: 360px;
+
+    color: var(--Color-Tema-A);
+    left: 100px;
+    top: 360px;
+
+}
+
+
+/*Area de resultado*/
+.cajaB textarea {
+    position: absolute;
+    opacity: 50%;
+    width: 360px;
+    height: 310px;
+    left: 30px;
+    top: 20px;
+
+    visibility: hidden;
+    /*Oculto*/
+
+    background-color: var(--Color-Tema-B);
+    border: 3px solid var(--Color-Borde-A);
+
+    font-family: 'Roboto Mono', monospace;
+    opacity: 70%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: var(--Color-Letra-B);
+}
+
+/*Estilo de los botones*/
+.cajaB button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+
+    background-color: var(--Color-Tema-A);
+
+    position: absolute;
+    width: 368px;
+    height: 47px;
+
+    visibility: hidden;
+    /*Oculto*/
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 24px;
+
+    color: var(--Color-Tema-B);
+}
+
+/*Boton de copiar*/
+.cajaB #copiar {
+
+    left: 6px;
+    top: 340px;
+
+}
+
+/*Boton de Guardar*/
+.cajaB #guardar {
+
+    left: 6px;
+    top: 387px;
+
+}
+
+/*Estilo de texto de botones*/
+.cajaB button b {
+    position: absolute;
+    width: 280px;
+    height: 19px;
+    left: 30px;
+    top: 14px;
+
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 19px;
+    text-align: center;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 8px;
+
+}
+
+
+/* ------------- CAJA 3 (Botones) ----------------*/
+
+/*Caja 3*/
+.cajaC {
+    position: absolute;
+    display: block;
+    /*Tamaño*/
+    width: 600px;
+    height: 100px;
+    /*Posicion*/
+    left: 0;
+    top: 350px;
+}
+
+/*Estilo de los botones*/
+.cajaC button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+
+    position: absolute;
+    width: 288px;
+    height: 67px;
+
+    border-radius: 24px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 24px;
+
+}
+
+/*Boton encriptar*/
+.cajaC #encriptar {
+    background: var(--Color-Tema-A);
+    left: 0px;
+    top: 20px;
+}
+
+/*Boton de desencriptar*/
+.cajaC #desencriptar {
+    background: var(--Color-Tema-B);
+    left: 300px;
+    top: 20px;
+}
+
+/*Estilo de texto de botones*/
+.cajaC button b {
+    position: absolute;
+    width: 280px;
+    height: 19px;
+    left: 0px;
+    top: 24px;
+
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 19px;
+    text-align: center;
+
+    color: var(--Color-Tema-B);
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 8px;
+}
+
+/*Color de texto del boton de descencrptar*/
+.cajaC #desencriptar b {
+    color: var(--Color-Tema-A);
+}
+
+/* ------------ CAJA 4 (Tabla y componentes) ---------------*/
+
+#CajaD{
+    position: absolute;
+    display: block;
+    background-color: #130517;
+    width: 2290px;
+    height: 2000px;
+    left: -30px;
+    top: 200px;
+}
+
+/*Caja 4*/
+ table {
+    position: absolute;
+    display: block;
+
+    background-color: var(--Color-Tabla);
+
+    /*Posicion hacia abajo*/
+    top: 480px;
+    left: -10px;
+}
+
+#cajaD table th,
+td,
+input,
+button {
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: var(--Color-Letra-A);
+}
+
+/*Encabezado*/
+#cajaD table th {
+    color: var(--Color-Tema-B);
+    background-color: var(--Color-Tema-A);
+    padding: 15px 45px;
+    font-size: 22px;
+    line-height: 9px;
+}
+
+td {
+    border: 1px solid var(--Color-Letra-A);
+    border-spacing: 0;
+    margin: 0px 8px;
+}
+
+/*Botones*/
+#cajaD table button {
+    width: 310px;
+    padding: 5px 70px;
+    font-size: 22px;
+}
+
+/*Filas*/
+#cajaD table td input {
+    font-size: 16px;
+    line-height: 9px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0px 70px;
+    outline: none;/*Quitar borde al enfocar*/
+
+}
+
+
+
+
+/*
+.cajaA a{
+    visibility: hidden;
+       background-color: rgb(23, 13, 5);
+   
+}*/
