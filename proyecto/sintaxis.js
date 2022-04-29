@@ -216,9 +216,9 @@ function noEspacios(fila) {
         return
     }
     var noValido = / /;
-    //Si tiene espacios o menos de 4 elementos
-    if (texto.length < 4 || noValido.test(texto)) {
-        //Si tiene el mismo valor
+    //Si tiene menos de 4 elementos o espacios o ya existe esa llave
+    if (texto.length < 4 || noValido.test(texto) || buscarLlave(LLAVES_DE_CARACTERES, texto)) {
+        //Si tiene el mismo valor 
         if (texto === LISTA_DE_CARACTERES[fila].toLowerCase()) {
             guardarLlavePorFila(fila, texto);
             return;
@@ -251,6 +251,21 @@ function concatenarTextoDeLlaves(fila) {
     } catch (error) {
         alert("ERROR, " + error.name + ": " + error.message);
     }
+}
+
+//Buscar texto en un arreglo
+function buscarLlave(Array, texto) {
+
+    for (let i = 0; i < Array.length; i++) {
+        if (Array[i] === texto) {
+            return true;
+        }
+
+    }
+
+    return false;
+    F
+
 }
 
 //--------- TEXTAREA -----------------------
@@ -619,7 +634,7 @@ function Botonguardar() {
     for (let i = 0; i < LLAVES_DE_CARACTERES.length; i++) {
         if (Aux < 5) {
             contenido += "   " + LISTA_DE_CARACTERES[i] + "    ---> " + LLAVES_DE_CARACTERES[i] + "    ";
-        }else{
+        } else {
             contenido += "\n\n";
             Aux = 0;
         }
